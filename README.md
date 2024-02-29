@@ -1,2 +1,2 @@
-# companionapp_hu
+# NextGen TV Howard University
  
