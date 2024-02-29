@@ -135,8 +135,8 @@ border: 1px solid #fff;
 .sidebar p{
   font-size: 16px;
 color: #f1f1f1;
-padding-left: 20px;
-padding-right: 20px;
+padding: 20px;
+
 }
 .sidebar h1 {
   padding-left: 20px;
