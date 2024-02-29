@@ -1,0 +1,50 @@
+{
+
+    "title" : "Title",
+    "link" : "https://example.com",
+    "description" : "Description",
+    "language" : "en-us",
+    "pubDate" : "Sat, 07 Sep 2002 0:00:01 EST",
+    "lastBuildDate" : "Sat, 07 Sep 2002 9:42:31 EDT",
+    "ttl" : "50",
+    "items": [
+    {
+    "title": "Dynamic Weather Map",
+    "description": "See the latest weather map, dynamically updated every 15 mins",
+    "guid": "201",
+    "link": "",
+    "pubDate": "Mon, 01 Jul 2019 04:28:14 GMT",
+    "media:group": {
+    "media:content": [
+    {
+    "medium": "document",
+    "type": "run3tv/local",
+    "url": "pac-man"
+    },
+    {
+    "medium": "document",
+    "type": "run3tv/remote",
+    "url": "work.yotta.pac-man?params=1"
+    },
+    {
+    "medium": "executable",
+    "type": "run3tv/samsung",
+    "url": "work.yotta.pac-man"
+    },
+    {
+    "medium": "executable",
+    "type": "run3tv/lge",
+    "url": "work.yotta.pac-man?params=1&amp;params=2"
+    }
+    ]
+    },
+    "media:thumbnail": [
+    {
+    "url": "/london/img/WebDisplay.png",
+    "width": "300",
+    "height": "169"
+    }
+]
+}
+]
+}
