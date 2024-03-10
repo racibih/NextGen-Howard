@@ -1,0 +1,60 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 1920px;
+    width: 1080px;
+}
+
+
+#um_performance_compilation {
+    flex: 1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.artistPanel {
+    display: flex;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.9;
+    color: white;
+    font-size: 15px;
+}
+
+.artistPicContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.artistTextContainer {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.artistPic {
+    max-height: 100%;
+    max-width: 100%;
+}
+
