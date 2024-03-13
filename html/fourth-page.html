@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fourth Page - My Website</title>
+    <link rel="stylesheet" href="../css/fourth-style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <iframe width="560" height="315" src="https://dzgc338jcsvop.cloudfront.net/DMVBUncleMarypromo.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="um_performance_compilation"></iframe>
+                <div class="artistPanel">
+                    <img class= "artistPic" src="../assets/um_band_pic.jpg" alt="Uncle Mary">
+                    
+                    <div class="artistTextContainer">
+                    <h1>Currently Playing</h1>
+                    <h2>Have Your Love</h2>
+                    <h3>by Uncle Mary</h3>
+                    </div>
+                    <!-- Add this button where you want the "Save to Favorites" feature -->
+<button id="saveToFavoritesBtn">Save to Favorites</button>
+
+                    <img class="artistPic" src="../assets/um_spotify_qrcode.jpg" alt="Uncle Mary Spotify QRCode">
+                    <img class="artistPic" src="../assets/um_applemusic_qrcode.jpg" alt="Uncle Mary Spotify QRCode">    
+
+                
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        // Check if the document is fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+    
+            // Function to save the current song to favorites
+            function saveToFavorites() {
+                // Get the current song details
+                var songDetails = {
+                    title: document.querySelector('h2').innerText,
+                    artist: document.querySelector('h3').innerText
+                    // Add more details if needed
+                };
+    
+                // Retrieve existing favorites from local storage or create an empty array
+                var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
+                // Check if the song is not already in favorites
+                if (!isInFavorites(songDetails, favorites)) {
+                    // Add the current song to favorites
+                    favorites.push(songDetails);
+    
+                    // Update the favorites in local storage
+                    localStorage.setItem('favorites', JSON.stringify(favorites));
+    
+                    // Optionally, you can provide user feedback here (e.g., show a success message)
+                    console.log('Song saved to favorites!');
+                } else {
+                    // Optionally, you can provide user feedback here (e.g., show a message that the song is already in favorites)
+                    console.log('Song is already in favorites!');
+                }
+            }
+    
+            // Function to check if a song is already in favorites
+            function isInFavorites(song, favorites) {
+                return favorites.some(function (favorite) {
+                    return favorite.title === song.title && favorite.artist === song.artist;
+                });
+            }
+    
+            // Attach the saveToFavorites function to the button click event
+            document.getElementById('saveToFavoritesBtn').addEventListener('click', saveToFavorites);
+        });
+    </script>
+    
+    <script src="companionapp_hu/js/index.js"></script>
+</body>
+</html>
