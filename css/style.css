@@ -39,171 +39,194 @@ border: 1px solid #fff;
 ------------------------------------------------
 ----------------------------------------------*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  /*----------------------------------------------
-  ------------------------------------------------
-  1. Universal Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
-  body {
-   /* font-family: Arial, Helvetica, sans-serif;*/
-    height: 1920px;
-    width: 1080px;
-  }
-  /*----------------------------------------------
-  ------------------------------------------------
-  2. Header & Nav Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*----------------------------------------------
+------------------------------------------------
+1. Universal Styles
+------------------------------------------------
+----------------------------------------------*/
+body {
+ /* font-family: Arial, Helvetica, sans-serif;*/
+ margin: 0; 
+ height: 1920px;
+  width: 1080px;
+}
+/*----------------------------------------------
+------------------------------------------------
+2. Header & Nav Styles
+------------------------------------------------
+----------------------------------------------*/
 
-  #um_performance_compilation{
-   flex: 1;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  /*  z-index: 99999;*/
+.video-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
 
+#um_performance_compilation {
+  position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%; 
+min-height: 100%;
+}
+
+
+ .new_panel_toggle{
+  position: relative;
  }
-  .artistPanel{
-    position: fixed;
-    left: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 25%;
-    height: 100%;
-    background-color: #242424;
-    opacity: 0.75;
-    color: white;
-    font-size: 15px;
-    text-align: center;
-  }
 
-  .artistPic{
-    height: 25%;
-    width: fit-content;
-  }
-
-
-  /*----------------------------------------------
-  ------------------------------------------------
-  3. Main Body Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
-  
-  /*----------------------------------------------
-  ------------------------------------------------
-  4. Sidebar Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
-  /* The sidebar menu */
-.sidebar {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: #111; /* Black*/
+.artistPanel{
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
+  width: 100%;
+  padding: 75px;
+  font-size: 25px;
   text-align: center;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  overflow-y: hidden;
-  padding-top: 80px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-  
+  display: none;
+  margin-left: 125px;
+}
+
+.artistPic{
+  width: 53%;
+  margin-right: 250px;
+}
+.spotifyqrPic{
+  width: 10%;
+  display: inline-block;
+
+}
+.appleqrPic{
+  width: 10%;
+  display: inline-block;
+
+} 
+
+/*----------------------------------------------
+------------------------------------------------
+3. Main Body Styles
+------------------------------------------------
+----------------------------------------------*/
+
+/*----------------------------------------------
+------------------------------------------------
+4. Sidebar Styles
+------------------------------------------------
+----------------------------------------------*/
+/* The sidebar menu */
+.sidebar {
+height: 100%; /* 100% Full-height */
+width: 0; /* 0 width - change this with JavaScript */
+position: fixed; /* Stay in place */
+z-index: 1; /* Stay on top */
+top: 0;
+left: 0;
+background-color: #111; /* Black*/
+color: #f1f1f1;
+text-align: center;
+overflow-x: hidden; /* Disable horizontal scroll */
+overflow-y: hidden;
+padding-top: 80px; /* Place content 60px from the top */
+transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+
 }
 
 /* The sidebar links */
 .sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
-  color: #f1f1f1;
+color: #f1f1f1;
 }
 .sidebar p{
-  font-size: 16px;
+font-size: 16px;
 color: #f1f1f1;
 padding: 20px;
 
 }
 .sidebar h1 {
-  padding-left: 20px;
+padding-left: 20px;
 padding-right: 20px;
 }
 .sidebar img {
-  padding-left: 20px;
+padding-left: 20px;
 padding-right: 20px;
 }
 /* Position and style the close button (top right corner) */
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.closebtn {
+position: absolute;
+top: 0;
+font-size: 36px;
+margin-left: 40%;
+text-decoration: none;
+color: #f1f1f1;
+
 }
 
+.button-group {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
 /* The button used to open the sidebar */
 .openbtn {
-  position: fixed;
-  z-index: 1;
-  font-size: 20px;
-  cursor: pointer;
+  margin-bottom: 10px; /* Adjust as needed */
   background-color: #111;
   color: white;
   padding: 10px 15px;
-  padding-bottom: 15px;
   border: none;
+  cursor: pointer;
 }
 
 .openbtn:hover {
-  background-color: #444;
+background-color: #444;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s; /* If you want a transition effect */
-  padding: 20px;
-}
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+.sidebar {padding-top: 15px;}
+.sidebar a {font-size: 18px;}
 }
 
-  /*----------------------------------------------
-  ------------------------------------------------
-  5. Widget Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
-  
-  /*----------------------------------------------
-  ------------------------------------------------
-  6. Footer Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
-  
-  /*----------------------------------------------
-  ------------------------------------------------
-  7. Comments & Form Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
-  
-  /*----------------------------------------------
-  ------------------------------------------------
-  8. Generic Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
+/*----------------------------------------------
+------------------------------------------------
+5. Widget Styles
+------------------------------------------------
+----------------------------------------------*/
+
+/*----------------------------------------------
+------------------------------------------------
+6. Footer Styles
+------------------------------------------------
+----------------------------------------------*/
+
+/*----------------------------------------------
+------------------------------------------------
+7. Comments & Form Styles
+------------------------------------------------
+----------------------------------------------*/
+
+/*----------------------------------------------
+------------------------------------------------
+8. Generic Styles
+------------------------------------------------
+----------------------------------------------*/
