@@ -1,64 +1,16 @@
-/*************************************************
-**************************************************
 
-
-
-Color Guide
-***************
-
-
-*************************************************
-
-Type Guide
-***************
-
-
-Debugging Tools
-***************
-border: 1px solid #fff;
-
-*************************************************/
-
-/************************************************
-*************************************************
-0. CSS Reset ------------------------ 
-1. Universal Styles -----------------
-2. Header & Nav Styles -------------- 
-3. Main Body Styles ----------------- 
-4. Sidebar Styles ------------------- 
-5. Widget Styles --------------------
-6. Footer Styles -------------------- 
-7. Comments & Form Styles ----------- 
-8. Generic Styles ----------- 
-*************************************************
-************************************************/
-
-/*----------------------------------------------
-------------------------------------------------
-0. CSS Reset
-------------------------------------------------
-----------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  /*----------------------------------------------
-  ------------------------------------------------
-  1. Universal Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
+ 
   body {
-   /* font-family: Arial, Helvetica, sans-serif;*/
    margin: 0; 
    height: 1920px;
     width: 1080px;
   }
-  /*----------------------------------------------
-  ------------------------------------------------
-  2. Header & Nav Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
+
   
   .video-container {
     position: fixed;
@@ -75,7 +27,6 @@ border: 1px solid #fff;
   min-width: 100%; 
   min-height: 100%;
 }
-
 
    .new_panel_toggle{
     position: relative;
@@ -98,6 +49,10 @@ border: 1px solid #fff;
     width: 53%;
     margin-right: 250px;
 }
+
+.artistFavPic{
+  width: 100%;
+}
 .spotifyqrPic{
     width: 10%;
     display: inline-block;
@@ -107,20 +62,7 @@ border: 1px solid #fff;
     width: 10%;
     display: inline-block;
 
-} 
-  
-  /*----------------------------------------------
-  ------------------------------------------------
-  3. Main Body Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
-  
-  /*----------------------------------------------
-  ------------------------------------------------
-  4. Sidebar Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
-  /* The sidebar menu */
+}  
   .sidebar {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
@@ -138,7 +80,7 @@ border: 1px solid #fff;
   
   }
   
-  /* The sidebar links */
+  
   .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -148,7 +90,6 @@ border: 1px solid #fff;
   transition: 0.3s;
   }
   
-  /* When you mouse over the navigation links, change their color */
   .sidebar a:hover {
   color: #f1f1f1;
   }
@@ -166,8 +107,8 @@ border: 1px solid #fff;
   padding-left: 20px;
   padding-right: 20px;
   }
-  /* Position and style the close button (top right corner) */
- .closebtn {
+
+  .closebtn {
   position: absolute;
   top: 0;
   font-size: 36px;
@@ -184,8 +125,8 @@ border: 1px solid #fff;
     display: flex;
     flex-direction: column;
 }
-  /* The button used to open the sidebar */
-  .openbtn {
+
+.openbtn {
     margin-bottom: 10px; /* Adjust as needed */
     background-color: #111;
     color: white;
@@ -198,35 +139,56 @@ border: 1px solid #fff;
   background-color: #444;
   }
   
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
   }
   
-  /*----------------------------------------------
-  ------------------------------------------------
-  5. Widget Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
+  .col-A1 {
+    width: 75%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the content */
+    text-align: left; /* Align content to the left */
+  }
   
-  /*----------------------------------------------
-  ------------------------------------------------
-  6. Footer Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
+  .col-A1 h1 {
+    display: inline-flex;
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
+  }
   
-  /*----------------------------------------------
-  ------------------------------------------------
-  7. Comments & Form Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
+  .col-A1 p {
+    display: inline-flex;
+    text-wrap: wrap; /* This property doesn't exist in CSS, consider 'overflow-wrap' or 'word-wrap' */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
   
-  /*----------------------------------------------
-  ------------------------------------------------
-  8. Generic Styles
-  ------------------------------------------------
-  ----------------------------------------------*/
+  .firstClass, .secondClass, .thirdClass {
+    flex: 1;
+}
+
+.col-A1, .col-3 {
+  flex: 1;
+}
+
+.col-A1 {
+  order: -1;
+}
+
+.col-3 {
+  order: 1;
+}
+
+.firstClass {
+    order: -1; /* Placing firstClass on the left */
+}
+
+.secondClass {
+    order: 1; /* Placing secondClass on the right */
+}
+
+.thirdClass {
+  order: 2; /* Placing secondClass on the right */
+}
